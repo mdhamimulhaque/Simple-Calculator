@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
+    <script src="function.js"></script>
     
 </head>
 <body>
@@ -18,40 +21,41 @@
           <div class="col-lg-12">
               <div class="full_calculator">
 
-                <input type="text" placeholder="0">
+                <input id="display" type="text" placeholder="0">
 
                 <div class="box1">
-                    <button class="c">C</button>
-                    <button class="ce">CE</button>
-                    <button class="modulus">%</button>
-                    <button class="divider">/</button>
+                    <button class="c" onclick="display.value =''">C</button>
+                    <button class="ce"  onclick="display.value =''">CE</button>
+                    <button class="modulus" onclick="display.value = display.value.slice(0,-1)">&larr;</button>
+                    <button class="divider" onclick="display.value = display.value + '/'">/</button>
                 </div>
 
                 <div class="box2">
-                    <button class="one">1</button>
-                    <button class="two">2</button>
-                    <button class="three">3</button>
-                    <button class="multiplication">X</button>
+                    <button class="one" onclick="display.value = display.value + '1'">1</button>
+                    <button class="two" onclick="display.value = display.value + '2'">2</button>
+                    <button class="three" onclick="display.value = display.value + '3'">3</button>
+                    <button class="multiplication" onclick="display.value = display.value + '*'">*</button>
                 </div>
 
                 <div class="box3">
-                    <button class="four">4</button>
-                    <button class="five">5</button>
-                    <button class="six">6</button>
-                    <button class="add">+</button>
+                    <button class="four" onclick="display.value = display.value + '4'">4</button>
+                    <button class="five" onclick="display.value = display.value + '5'">5</button>
+                    <button class="six" onclick="display.value = display.value + '6'">6</button>
+                    <button class="add" onclick="display.value = display.value + '+'">+</button>
                 </div>
 
                 <div class="box4">
-                    <button class="seven">7</button>
-                    <button class="eight">8</button>
-                    <button class="nine">9</button>
-                    <button class="sub">-</button>
+                    <button class="seven" onclick="display.value = display.value + '7'">7</button>
+                    <button class="eight" onclick="display.value = display.value + '8'">8</button>
+                    <button class="nine" onclick="display.value = display.value + '9'">9</button>
+                    <button class="sub" onclick="display.value = display.value + '-'">-</button>
                 </div>
 
                 <div class="box4">
-                    <button class="zero">0</button>
-                    <button class="dot">.</button>
-                    <button class="equal">=</button>
+                    <button class="zero" onclick="display.value = display.value + '0'">0</button>
+                    <button class="dot" onclick="display.value = display.value + '.'">.</button>
+                    <button class="equal" onclick="display.value = eval(display.value)">=</button>
+                    <button class="modulus" onclick="display.value = Math.sqrt(display.value)">&radic;</button>
                 </div>
                
               </div>
