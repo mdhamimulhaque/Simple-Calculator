@@ -9,7 +9,7 @@
     width: 30%;
     margin: 0 auto;
     background: #000;
-    padding: 15px;
+    padding: 20px;
 }
 
 input{
@@ -19,32 +19,37 @@ input{
     font-size: 30px;
     padding: 5px;
     font-family: 'Orbitron', sans-serif;
-    /* margin-bottom:15px; */
+    margin-bottom:5px;
+    border-radius:5%;
+    
 }
-button{
-    width:25%;
-    height:60px;
+button {
+    width: 20%;
+    height: 60px;
     border: none;
-     box-shadow: 2px 2px 2px #000;
-
-   
+    font-weight: bold;
+    margin-left: 2%;
+    margin-top: 2%;
+    border-radius: 5%;
+    
 }
 button:hover{
-    background: skyblue;
-    cursor: pointer
-
-   
+    background-color:#6FEBFB;
+    cursor: pointer; 
+    box-shadow: -1px 1px 8px 2px #6febfb;
+    color:#fff 
 }
 .box1,.box2,.box3,.box4,.box5{
   width: 100%;
-  margin: 0 auto;
   display: flex;
-  justify-content:
+  justify-content:space-between
 
 }
-/* .zero,.dot,.equal{
-	width: 33.33%
-} */
+
+
+.c,.one,.four,.seven,.zero{
+    margin-left: 0;
+}
 
 
 
